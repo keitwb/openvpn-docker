@@ -1,0 +1,19 @@
+remote <VPN_HOSTNAME>
+remote-cert-eku "TLS Web Server Authentication"
+ns-cert-type server
+
+route <LOCAL_SUBNET> <LOCAL_SUBNET_MASK>
+
+<tls-auth>
+<TLS_AUTH>
+</tls-auth>
+key-direction 1
+
+<ca>
+<CA_CERT>
+</ca>
+
+tls-version-min 1.2
+cipher AES-256-CBC
+auth SHA-256
+tls-cipher TLS-ECDHE-RSA-WITH-AES-128-GCM-SHA256:TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256:TLS-ECDHE-RSA-WITH-AES-256-GCM-SHA384:TLS-DHE-RSA-WITH-AES-256-CBC-SHA256

@@ -14,7 +14,7 @@ set +a
 sed \
   -e "s/<LOCAL_IP>/${LOCAL_IP:-0.0.0.0}/" \
   -e "s/<VPN_SUBNET>/${VPN_SUBNET:-10.9.8.0}/" \
-  -e "s/<VPN_HOSTNAME>/${SERVER_HOSTNAME}/" \
+  -e "s/<VPN_HOSTNAME>/${VPN_HOSTNAME}/" \
   /etc/openvpn/server.conf.template > /etc/openvpn/server.conf
 
 if [[ -z "$1" ]]

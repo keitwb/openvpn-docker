@@ -4,9 +4,9 @@ mode server
 
 proto udp
 dev tun
-ca /etc/ca/keys/ca.crt
-cert /etc/ca/keys/<VPN_HOSTNAME>.crt
-key /etc/ca/keys/<VPN_HOSTNAME>.key  # This file should be kept secret
+ca /etc/ca/ca.crt
+cert /etc/ca/<VPN_HOSTNAME>.crt
+key /etc/ca/<VPN_HOSTNAME>.key  # This file should be kept secret
 
 dh /etc/ca/dhparam.pem
 server <VPN_SUBNET> 255.255.255.0
